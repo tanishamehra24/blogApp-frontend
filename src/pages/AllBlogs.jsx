@@ -13,7 +13,7 @@ const AllBlogs = function () {
       try {
         const response = await axios.get(
           "https://blog-backend-1-iif8.onrender.com/api/v1/blogs"
-        );
+        ); 
         setBlogs(response.data);
       } catch (error) {
         toast.error("Failed to get all blogs");
