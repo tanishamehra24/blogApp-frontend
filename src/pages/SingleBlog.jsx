@@ -22,7 +22,7 @@ const SingleBlog = function () {
       async function fetchSingleBlog() {
         try {
           const response = await axios.get(
-            `http://localhost:8080/api/v1/blogs/${id}`
+            `https://blog-backend-1-iif8.onrender.com/api/v1/blogs${id}`
           );
           setBlog(response.data);
           console.log(response.data);
@@ -39,7 +39,7 @@ const SingleBlog = function () {
 
   async function deleteBlog(id) {
     try {
-      await axios.delete(`http://localhost:8080/api/v1/blogs/${id}`);
+      await axios.delete(`https://blog-backend-1-iif8.onrender.com/api/v1/blogs/${id}`);
       navigate("/blogs");
       toast("Blog deleted successfully");
     } catch (error) {
